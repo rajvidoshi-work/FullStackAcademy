@@ -10,7 +10,14 @@ public class Employee {
 		EmployeeServiceImpl service = null;
 		AbstractApplicationContext context = new AnnotationConfigApplicationContext(SpringConfiguration.class);
 		service = (EmployeeServiceImpl) context.getBean("employeeService");
-		System.out.println(service.insert(EmployeeDTO));
+		
+		EmployeeDTO emp = new EmployeeDTO();
+		emp.setEmpId(1001);
+		emp.setEmpName("Abc");
+		emp.setDepartment("Production");
+		
+		service.insert(emp);
+		service.delete(0);
 		context.close();
 	}
 

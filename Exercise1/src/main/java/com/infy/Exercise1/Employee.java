@@ -2,7 +2,6 @@ package com.infy.Exercise1;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.AbstractApplicationContext;
-
 import com.infy.Exercise1.util.SpringConfiguration;
 
 public class Employee {
